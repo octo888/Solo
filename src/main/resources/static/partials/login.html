@@ -1,0 +1,15 @@
+<link href="../css/signin.css" rel="stylesheet">
+
+<div class="alert alert-danger" ng-show="error">
+    There was a problem logging in. Please try again.
+</div>
+<form class="form-signin" role="form" ng-submit="login()" >
+    <h2 class="form-signin-heading">Пожалуйста ввойдите</h2>
+
+    <input type="text" name="username" id="username"
+           ng-model="credentials.username" class="form-control" placeholder="Login" required autofocus>
+
+    <input type="password" name="password" id="password" ng-model="credentials.password" class="form-control" placeholder="Password" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+</form>
