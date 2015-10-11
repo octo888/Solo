@@ -51,7 +51,6 @@ soloFilters.filter('selectedPrice', function () {
             }
         }
 
-        filtered = [];
     }
 });
 

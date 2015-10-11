@@ -1,5 +1,31 @@
-<ul>
-    <li ng-repeat="item in cart">
-        <p>{{item.name}}</p>
-    </li>
-</ul>
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Цена</th>
+        <th>Действие</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        <tr ng-repeat="item in cart">
+            <td>
+                <a href="/book/{{item.id}}">{{item.name}}</a>
+            </td>
+
+            <td>
+                <p>{{item.price}}</p>
+            </td>
+
+            <td>
+                <a href=""
+                   class="btn btn-danger triggerRemove">
+                    Удалить </a>
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+<h4 class="pull-right"><strong>Итого:</strong> {{orderSum()}} грн.</h4>
+<a href="/order" class="btn btn-primary">Оформить</a>

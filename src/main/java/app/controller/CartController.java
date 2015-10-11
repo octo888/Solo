@@ -20,10 +20,11 @@ public class CartController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping(value = "/addToCart", method = RequestMethod.POST)
-    public void add(@RequestBody List<Book> books) {
-        /*List<Book> books = new ArrayList<>();
-        books.add(bookService.findOne(id));*/
+    @RequestMapping(value = "/addToCart/{id}", method = RequestMethod.GET)
+    public void add(@PathVariable Long id) {
+        List<Book> books = new ArrayList<>();
+        books.add(bookService.findOne(id));
+        //books.add(book);
         cart.setItems(books);
     }
 

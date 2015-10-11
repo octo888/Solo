@@ -5,9 +5,11 @@
     </div>
     <br/>
 
+
     <div class="col-xs-12 col-sm-8">
 
         <div class="row">
+
             <div class="col-xs-12 col-sm-6 col-lg-4 item"
                  ng-repeat="book in books | filter: search | orderBy: 'price' | selectedPrice: price ">
                 <div class="preview-img text-center">
@@ -27,10 +29,11 @@
                 <p>{{book.description | descsize}}</p>
 
                 <p><a class="btn btn-primary" href="/book/{{book.id}}" role="button">Подробнее &raquo;</a>
-                    <a class="btn btn-success"  ng-click="addToCart(book.id)" role="button">В корзину &raquo;</a></p>
+                    <a class="btn btn-success"  ng-click="addToCart(book)" role="button">В корзину &raquo;</a></p>
 
             </div>
             <!--/.col-sm-6.col-lg-4-->
+            <div ng-repeat="item in arr"><p>{{item.image.id}}</p></div>
         </div>
     </div>
     <!--/.col-xs-12.col-sm-8-->

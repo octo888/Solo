@@ -26,11 +26,12 @@
 
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Главная</a></li>
                 <!--<li><a href="/login">Login</a></li>
                 <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>-->
-                <li><a href="/admin/add-book">Add Book</a></li>
-                <li><a href="/cart">Cart</a></li>
+                <li><a href="/admin/add-book">Добавить книгу</a></li>
+                <li><a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span><strong>Корзина</strong>
+                    <span class="badge">{{cartSum}}</span></a></li>
             </ul>
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
@@ -40,7 +41,7 @@
     <ng-view></ng-view>
 </div>
 
-<hr>
+
 <footer>
     <div class="container">
         <div class="row">

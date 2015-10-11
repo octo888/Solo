@@ -3,31 +3,33 @@
 /* Controllers */
 var soloControllers = angular.module('soloControllers', []);
 
-soloApp.controller('HomeCtrl', ['$scope', '$http', 'BookList',
-    function ($scope, $http, BookList) {
+soloApp.controller('HomeCtrl', ['$scope', '$rootScope', '$http', 'BookList',
+    function ($scope, $rootScope, $http, BookList) {
 
         $scope.books = BookList.query();
 
-        var books = $scope.books;
-
-        console.log(books);
-
-        var cartList = [];
-        $scope.addToCart = function (id) {
+        var arr = [];
+        $scope.addToCart = function (book) {
             //$http.post("/addToCart", id);
-            for(var i = 0; i < books.length; i++) {
-                if (books[i].id === id) {
-                    cartList.push(books[i]);
-                }
-            }
+            arr.push(book);
+
+            $rootScope.cartSum = arr.length;
+            $rootScope.cartItems = arr;
         };
-        console.log(cartList);
-        $http.post("/addToCart", cartList);
+
 
     }]);
 
-soloApp.controller('CartCtrl', ['$scope', 'CartItems', function ($scope, CartItems) {
-    $scope.cart = CartItems.query();
+soloApp.controller('CartCtrl', ['$scope', '$rootScope', 'CartItems', function ($scope, $rootScope, CartItems) {
+    var items = $rootScope.cartItems;
+    $scope.cart = $rootScope.cartItems;
+    $scope.orderSum = function() {
+        var total = 0;
+        for(var i = 0; i < items.length; i++) {
+            total += items[i].price;
+        }
+        return total;
+    }
 }]);
 
 soloApp.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
