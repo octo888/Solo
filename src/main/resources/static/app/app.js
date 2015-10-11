@@ -36,6 +36,10 @@ soloApp.config(['$routeProvider', '$locationProvider', '$httpProvider',
                 templateUrl: 'partials/book-detail.html',
                 controller: 'BookDetailCtrl'
             }).
+            when('/cart', {
+                templateUrl: 'partials/cart.html',
+                controller: 'CartCtrl'
+            }).
             otherwise({
                 redirectTo: '/'
             });

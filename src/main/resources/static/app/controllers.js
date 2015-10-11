@@ -3,9 +3,31 @@
 /* Controllers */
 var soloControllers = angular.module('soloControllers', []);
 
-soloApp.controller('HomeCtrl', ['$scope', '$http', 'BookList', function ($scope, $http, BookList) {
-    $scope.books = BookList.query();
+soloApp.controller('HomeCtrl', ['$scope', '$http', 'BookList',
+    function ($scope, $http, BookList) {
 
+        $scope.books = BookList.query();
+
+        var books = $scope.books;
+
+        console.log(books);
+
+        var cartList = [];
+        $scope.addToCart = function (id) {
+            //$http.post("/addToCart", id);
+            for(var i = 0; i < books.length; i++) {
+                if (books[i].id === id) {
+                    cartList.push(books[i]);
+                }
+            }
+        };
+        console.log(cartList);
+        $http.post("/addToCart", cartList);
+
+    }]);
+
+soloApp.controller('CartCtrl', ['$scope', 'CartItems', function ($scope, CartItems) {
+    $scope.cart = CartItems.query();
 }]);
 
 soloApp.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
@@ -82,12 +104,12 @@ soloApp.controller('AddBookCtrl', ['$scope', '$location', '$window', '$route', '
     }]);
 
 soloApp.controller('BookDetailCtrl', ['$scope', '$routeParams', 'BookDetail',
-    function($scope, $routeParams, BookDetail) {
+    function ($scope, $routeParams, BookDetail) {
 
         $scope.bookId = $routeParams.bookId;
 
-        BookDetail.get( {bookId: $routeParams.bookId}, function(data) {
+        BookDetail.get({bookId: $routeParams.bookId}, function (data) {
             $scope.book = data;
         })
-}]);
+    }]);
 

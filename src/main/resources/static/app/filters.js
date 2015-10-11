@@ -4,11 +4,6 @@
 
 var soloFilters = angular.module('soloFilters', []);
 
-soloFilters.filter('checkmark', function () {
-    return function (input) {
-        return input ? '\u2713' : '\u2718';
-    };
-});
 
 soloFilters.filter('descsize', function () {
     return function (input) {
@@ -27,7 +22,7 @@ soloFilters.filter('selectedPrice', function () {
         } else {
             if (value == 100) {
                 for (var i = 0; i < items.length; i++) {
-                    if (items[i].price < value) {
+                    if (items[i].price <= value) {
                         filtered.push(items[i]);
                     }
                 }
@@ -35,7 +30,7 @@ soloFilters.filter('selectedPrice', function () {
             }
             else if (value == 300) {
                 for (var i = 0; i < items.length; i++) {
-                    if (items[i].price > 100 && items[i].price < value) {
+                    if (items[i].price >= 100 && items[i].price <= value) {
                         filtered.push(items[i]);
                     }
                 }
@@ -43,18 +38,20 @@ soloFilters.filter('selectedPrice', function () {
             }
             else if (value == 500) {
                 for (var i = 0; i < items.length; i++) {
-                    if (items[i].price > 300 && items[i].price < value) {
+                    if (items[i].price >= 300 && items[i].price <= value) {
                         filtered.push(items[i]);
                     }
                 }
                 return filtered;
             }
-            else if (value == 0) {
-                return items;
+            else {
+                if (value == 0) {
+                    return items;
+                }
             }
         }
 
-
+        filtered = [];
     }
 });
 
