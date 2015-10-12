@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "books")
-public class Book extends Product implements Item {
+public class Book extends Product {
 
     private String author;
 

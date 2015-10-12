@@ -3,16 +3,14 @@
 /* Controllers */
 var soloControllers = angular.module('soloControllers', []);
 
-soloApp.controller('HomeCtrl', ['$scope', '$rootScope', '$http', 'BookList',
-    function ($scope, $rootScope, $http, BookList) {
+soloApp.controller('HomeCtrl', ['$scope', '$rootScope', 'BookList',
+    function ($scope, $rootScope, BookList) {
 
         $scope.books = BookList.query();
 
         var arr = [];
         $scope.addToCart = function (book) {
-            //$http.post("/addToCart", id);
             arr.push(book);
-
             $rootScope.cartSum = arr.length;
             $rootScope.cartItems = arr;
         };
@@ -20,7 +18,7 @@ soloApp.controller('HomeCtrl', ['$scope', '$rootScope', '$http', 'BookList',
 
     }]);
 
-soloApp.controller('CartCtrl', ['$scope', '$rootScope', 'CartItems', function ($scope, $rootScope, CartItems) {
+soloApp.controller('CartCtrl', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
     var items = $rootScope.cartItems;
     $scope.cart = $rootScope.cartItems;
     $scope.orderSum = function() {
@@ -29,7 +27,19 @@ soloApp.controller('CartCtrl', ['$scope', '$rootScope', 'CartItems', function ($
             total += items[i].price;
         }
         return total;
-    }
+    };
+
+    $scope.addOrder = function() {
+        var formData = new FormData();
+        formData.append('username', $scope.username);
+        formData.append('email', $scope.email);
+        formData.append('items', $scope.cart);
+        $http.post('ord', formData, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        });
+
+    };
 }]);
 
 soloApp.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
@@ -79,8 +89,8 @@ soloApp.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
         }
     }]);
 
-soloApp.controller('AddBookCtrl', ['$scope', '$location', '$window', '$route', 'fileUpload',
-    function ($scope, $location, $window, $route, fileUpload) {
+soloApp.controller('AddBookCtrl', ['$scope', '$route', 'fileUpload',
+    function ($scope, $route, fileUpload) {
 
         $scope.submit = function () {
 

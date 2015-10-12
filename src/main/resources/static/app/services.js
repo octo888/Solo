@@ -26,11 +26,6 @@ soloServices.factory('BookDetail', ['$resource', function($resource) {
 
 
 
-soloServices.factory('CartItems', ['$resource', function($resource) {
-        return $resource('/getCart', {
-            query: {method:'GET', isArray:true}
-        })
-}]);
 
 soloServices.service('fileUpload', ['$http', function ($http) {
     this.uploadFileToUrl = function(fd, uploadUrl){
