@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class BookController {
@@ -19,9 +20,19 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping("/book/{id}")
-    public Book getBook(@PathVariable Long id) {
+    @RequestMapping("/getAllBooks")
+    public List findBooks() {
+        return bookService.findAll();
+    }
+
+    @RequestMapping("/getBook")
+    public Book getBook(@RequestParam("bookId") Long id) {
         return bookService.findOne(id);
+    }
+
+    @RequestMapping("/removeBook")
+    public void removeBook(@RequestParam("bookId") Long id) {
+        bookService.removeBook(id);
     }
 
     @RequestMapping(value = "/addbook", method = RequestMethod.POST)

@@ -4,20 +4,15 @@
 
 var soloApp = angular.module('soloApp', [
     'ngRoute',
-    'ngResource',
+    'ngStorage',
+    'ngCookies',
 
-    'soloControllers',
-    'soloServices',
     'soloFilters',
     'soloDirectives'
 ]);
 
-soloApp.config(['$routeProvider', '$locationProvider', '$httpProvider',
-    function($routeProvider, $locationProvider, $httpProvider) {
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
+soloApp.config(['$routeProvider', '$httpProvider',
+    function ($routeProvider, $httpProvider) {
 
         $routeProvider.
             when('/', {
@@ -30,19 +25,38 @@ soloApp.config(['$routeProvider', '$locationProvider', '$httpProvider',
             }).
             when('/admin/add-book', {
                 templateUrl: 'partials/admin/add-book.html',
-                controller: 'AddBookCtrl'
+                controller: 'AdminCtrl'
+            }).
+            when('/admin/remove-book', {
+                templateUrl: 'partials/admin/remove-book.html',
+                controller: 'AdminCtrl'
+            }).
+            when('/admin/orders', {
+                templateUrl: 'partials/admin/orders.html',
+                controller: 'AdminCtrl'
             }).
             when('/book/:bookId', {
                 templateUrl: 'partials/book-detail.html',
-                controller: 'BookDetailCtrl'
+                controller: 'BookCtrl'
             }).
             when('/cart', {
                 templateUrl: 'partials/cart.html',
                 controller: 'CartCtrl'
+            }).
+            when('/order', {
+                templateUrl: 'partials/order.html',
+                controller: 'OrderCtrl'
             }).
             otherwise({
                 redirectTo: '/'
             });
 
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-    }]);
+    }])
+    .run(function ($rootScope, $localStorage) {
+
+        $rootScope.cartLength = $localStorage.cart.length;
+        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+            $rootScope.alertClean();
+        });
+    });

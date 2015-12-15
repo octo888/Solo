@@ -1,6 +1,7 @@
 package app.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -25,6 +26,8 @@ public class Order {
     private List<Book> books;
 
     private Integer orderSum;
+
+    private Date orderDate;
 
     public Long getId() {
         return id;
@@ -88,5 +91,13 @@ public class Order {
 
     public void setOrderSum(Integer orderSum) {
         this.orderSum = orderSum;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 }
