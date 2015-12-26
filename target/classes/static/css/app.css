@@ -11,6 +11,7 @@ html {
     min-height: 100%;
 }
 body {
+    background: url("../images/back.png");
     padding-top: 70px;
     margin-bottom: 190px;
 }
@@ -28,12 +29,17 @@ footer {
     height: 170px;
 }
 
+#topNav {
+    margin: 0;
+}
+
 .jumbotron {
     background: url(../images/logo.jpg) no-repeat 50% 50%;
-    height: 300px;
+    height: 500px;
     background-size: cover;
     text-shadow: 0 1px 3px rgba(255, 255, 255, .8);
     color: rgba(0, 1, 0, .9);
+    width: 100%;
 }
 
 .preview-img {

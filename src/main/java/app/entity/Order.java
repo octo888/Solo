@@ -22,7 +22,7 @@ public class Order {
 
     private String address;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Book> books;
 
     private Integer orderSum;

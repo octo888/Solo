@@ -36,13 +36,13 @@
                 <li><a ng-href="#/admin/remove-book">Удалить книгу</a></li>
                 <li><a ng-href="#/admin/orders">Заказы</a></li>
                 <li><a ng-href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span><strong>Корзина</strong>
-                    <span class="badge">{{$root.cartLength}}</span></a></li>
+                    <span class="badge">{{cartLength()}}</span></a></li>
             </ul>
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
 
-<div class="container">
+<div class="container-fluid">
     <ng-view></ng-view>
 </div>
 

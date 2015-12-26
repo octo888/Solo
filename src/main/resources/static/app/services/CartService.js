@@ -7,12 +7,13 @@
         .factory("CartService", ['$localStorage', '$http', CartService]);
 
     function CartService($localStorage, $http) {
-       // $localStorage.cart = [];
 
         return {
             getCart: getCart,
+            getCartLength: getCartLength,
             addToCart: addToCart,
             cartAmount: cartAmount,
+            removeFromCart: removeItem,
             addOrder: addOrder
         };
 
@@ -22,6 +23,16 @@
 
         function addToCart(book) {
             $localStorage.cart.push(book);
+        }
+
+        function removeItem(book) {
+            while($localStorage.cart.indexOf(book)  !== -1) {
+                $localStorage.cart.splice($localStorage.cart.indexOf(book), 1);
+            }
+        }
+
+        function getCartLength() {
+            return $localStorage.cart.length;
         }
 
         function cartAmount() {

@@ -11,6 +11,11 @@
         $scope.cart = CartService.getCart();
         $scope.addOrder = addOrder;
         $scope.cartAmount = CartService.cartAmount();
+        $scope.remove = removeFromCart;
+
+        function removeFromCart(book) {
+            CartService.removeFromCart(book);
+        }
 
         function addOrder() {
             var items = CartService.getCart();

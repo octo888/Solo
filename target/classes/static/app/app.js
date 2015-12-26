@@ -52,10 +52,11 @@ soloApp.config(['$routeProvider', '$httpProvider',
             });
 
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-    }]).run(function ($rootScope, $localStorage) {
+    }])
+    .run(function ($rootScope, $localStorage) {
 
-    $rootScope.cartLength = $localStorage.cart.length;
-    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.alertClean();
+        //$rootScope.cartLength = $localStorage.cart.length;
+        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+            $rootScope.alertClean();
+        });
     });
-});

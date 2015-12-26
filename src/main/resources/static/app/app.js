@@ -55,7 +55,7 @@ soloApp.config(['$routeProvider', '$httpProvider',
     }])
     .run(function ($rootScope, $localStorage) {
 
-        $rootScope.cartLength = $localStorage.cart.length;
+        //$rootScope.cartLength = $localStorage.cart.length;
         $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
             $rootScope.alertClean();
         });
