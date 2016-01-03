@@ -43,4 +43,9 @@ public class OrderController {
         return orderService.findAll();
     }
 
+    @RequestMapping("/getOrderDetails")
+    public Order getOrder(@RequestParam(value = "id") long id) {
+        return orderService.findOneById(id);
+    }
+
 }

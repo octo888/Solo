@@ -5,9 +5,9 @@
 (function() {
     'use strict';
     angular.module('soloApp')
-        .controller('CartCtrl', ['$scope', 'CartService', CartCtrl]);
+        .controller('CartCtrl', ['$scope', '$location', 'CartService', CartCtrl]);
 
-    function CartCtrl($scope, CartService) {
+    function CartCtrl($scope, $location, CartService) {
         $scope.cart = CartService.getCart();
         $scope.addOrder = addOrder;
         $scope.cartAmount = CartService.cartAmount();
@@ -29,7 +29,7 @@
 
             $scope.order.amount = $scope.cartAmount();
             CartService.addOrder($scope.order, itemsId()).then(function(data) {
-
+                $location.path('order/' + data.id);
             });
         }
     }

@@ -11,13 +11,30 @@ html {
     min-height: 100%;
 }
 body {
-    background: url("../images/back.png");
+    font-family: 'Roboto', sans-serif;
+    background: url("../images/lightpaperfibers.png");
     padding-top: 70px;
     margin-bottom: 190px;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
+}
+
+#topNav {
+    background: #5c2e91;
+}
+#topNav a {
+    color: #fff;
+}
+
+.btn-primary {
+     background: #5c2e91;
+    border-color: #5c2e91;
+ }
+
+.btn-primary:hover {
+    background-color:#793EBD;
 }
 
 footer {

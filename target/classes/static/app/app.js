@@ -43,8 +43,12 @@ soloApp.config(['$routeProvider', '$httpProvider',
                 templateUrl: 'partials/cart.html',
                 controller: 'CartCtrl'
             }).
-            when('/order', {
-                templateUrl: 'partials/order.html',
+            when('/add-order', {
+                templateUrl: 'partials/add-order.html',
+                controller: 'CartCtrl'
+            }).
+            when('/order/:orderId', {
+                templateUrl: 'partials/order-details.html',
                 controller: 'OrderCtrl'
             }).
             otherwise({

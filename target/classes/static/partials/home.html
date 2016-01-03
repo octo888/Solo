@@ -26,10 +26,10 @@
                 </div>
                 <h2 align="center">{{book.name}}</h2>
 
-                <p>{{book.description | descsize}}</p>
+                <p style="text-align: justify">{{book.description | descsize}}</p>
 
                 <p><a class="btn btn-primary" ng-href="#/book/{{book.id}}" role="button">Подробнее &raquo;</a>
-                    <a class="btn btn-success"  ng-click="addToCart(book)" role="button">В корзину &raquo;</a></p>
+                    <a class="btn btn-success pull-right"  ng-click="addToCart(book)" role="button">В корзину &raquo;</a></p>
 
             </div>
             <!--/.col-sm-6.col-lg-4-->

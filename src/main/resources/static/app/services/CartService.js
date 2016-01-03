@@ -4,9 +4,9 @@
 
 (function() {
     angular.module("soloApp")
-        .factory("CartService", ['$localStorage', '$http', CartService]);
+        .factory("CartService", ['$localStorage', '$location', '$http', CartService]);
 
-    function CartService($localStorage, $http) {
+    function CartService($localStorage, $location, $http) {
 
         return {
             getCart: getCart,
@@ -14,7 +14,8 @@
             addToCart: addToCart,
             cartAmount: cartAmount,
             removeFromCart: removeItem,
-            addOrder: addOrder
+            addOrder: addOrder,
+            getOrder: getOrder
         };
 
         function getCart() {
@@ -22,6 +23,9 @@
         }
 
         function addToCart(book) {
+            if (!$localStorage.cart) {
+                $localStorage.cart = [];
+            }
             $localStorage.cart.push(book);
         }
 
@@ -60,7 +64,18 @@
                 headers: {'Content-Type': undefined},
                 params: {username: order.username, email: order.email, amount: order.amount, items: itemsId}
             }).then(function (response) {
+                $localStorage.cart = [];
+                return response.data;
+            });
+        }
 
+        function getOrder(id) {
+            return $http({
+                url: "/getOrderDetails",
+                responseType: "json",
+                params: {id: id}
+            }).then(function (response) {
+                return response.data;
             });
         }
 

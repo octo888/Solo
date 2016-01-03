@@ -22,4 +22,8 @@ public class OrderService {
     public List findAll() {
         return orderRepository.findAll();
     }
+
+    public Order findOneById(long id) {
+        return orderRepository.findOne(id);
+    }
 }
