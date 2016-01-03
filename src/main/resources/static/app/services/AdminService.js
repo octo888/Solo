@@ -1,6 +1,3 @@
-/**
- * Created by Viktor Moroz on 12/2/15.
- */
 
 (function() {
     angular.module("soloApp")
@@ -8,9 +5,21 @@
 
     function AdminService($http) {
         return {
+            authenticate: authenticate,
             removeBook: removeBook,
             getOrders: getOrders
         };
+
+        function authenticate(username, password) {
+            return $http({
+                method: "POST",
+                url: "/loginUser",
+                responseType: "json",
+                params: {username: username, password: password}
+            }).then(function (response) {
+                console.log(response);
+            });
+        }
 
         function removeBook(bookId) {
             return $http({

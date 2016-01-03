@@ -16,6 +16,10 @@ body {
     margin-bottom: 190px;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 footer {
     background: #333;
     color: #eee;
@@ -27,10 +31,6 @@ footer {
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 170px;
-}
-
-#topNav {
-    margin: 0;
 }
 
 .jumbotron {
@@ -116,15 +116,15 @@ h2 {
     }
 }
 
-.phone-images {
+.book-images {
     text-align: center;
 }
 
-.phone-images img {
+.book-images img {
     max-width: 100%;
 }
 
-.phone-thumbs li {
+/*.phone-thumbs li {
     float: left;
     width: 30%;
     padding: 16px;
@@ -132,9 +132,9 @@ h2 {
 
 .phone-thumbs li img {
     max-width: 100%;
-}
+}*/
 
-.specs li {
+/*.specs li {
     display: inline-block;
     vertical-align: top;
     width: 30%;
@@ -155,7 +155,7 @@ h2 {
 
 .preview-img span.glyphicon {
     margin-right: 5px;
-}
+}*/
 
 .badge {
     background: #fff;

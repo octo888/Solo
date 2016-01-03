@@ -7,5 +7,5 @@ import java.security.Principal;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Principal findByName(String name);
+    User findByName(String name);
 }

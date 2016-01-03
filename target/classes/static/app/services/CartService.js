@@ -32,7 +32,11 @@
         }
 
         function getCartLength() {
-            return $localStorage.cart.length;
+            if($localStorage.cart) {
+                return $localStorage.cart.length;
+            } else {
+                return 0;
+            }
         }
 
         function cartAmount() {
