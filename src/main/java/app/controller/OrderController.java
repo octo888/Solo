@@ -25,12 +25,14 @@ public class OrderController {
     @RequestMapping( value = "/addOrder", method = RequestMethod.POST)
     public Order addOrder(@RequestParam(value = "username") String username,
                          @RequestParam(value = "email") String email,
+                         @RequestParam(value = "phone") String phone,
                          @RequestParam(value = "amount") int amount,
                          @RequestParam(value = "items") List<Long> id)
     {
         Order order = new Order();
         order.setUsername(username);
         order.setEmail(email);
+        order.setPhone(phone);
         order.setBooks(bookService.getBooksById(id));
         order.setOrderDate(new Date());
         order.setOrderSum(amount);

@@ -28,9 +28,17 @@ body {
     color: #fff;
 }
 
+.dropdown-menu  {
+    background: #5c2e91;
+}
+
+li.dropdown.open > a:focus {
+    background:#793EBD
+}
+
 .btn-primary {
      background: #5c2e91;
-    border-color: #5c2e91;
+     border-color: #5c2e91;
  }
 
 .btn-primary:hover {
@@ -48,6 +56,11 @@ footer {
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 170px;
+}
+
+#bookDesc {
+    text-align: justify;
+    height: 70px;
 }
 
 .jumbotron {

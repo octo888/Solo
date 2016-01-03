@@ -62,7 +62,7 @@
                 responseType: "json",
                 transformRequest: angular.identity,
                 headers: {'Content-Type': undefined},
-                params: {username: order.username, email: order.email, amount: order.amount, items: itemsId}
+                params: {username: order.username, email: order.email, phone: order.phone, amount: order.amount, items: itemsId}
             }).then(function (response) {
                 $localStorage.cart = [];
                 return response.data;
