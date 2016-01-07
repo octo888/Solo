@@ -65,7 +65,7 @@ footer {
 
 .jumbotron {
     background: url(../images/logo.jpg) no-repeat 50% 50%;
-    height: 500px;
+    height: 400px;
     background-size: cover;
     text-shadow: 0 1px 3px rgba(255, 255, 255, .8);
     color: rgba(0, 1, 0, .9);
@@ -86,6 +86,10 @@ footer {
     display: block;
 }
 
+.label {
+    font-size: 100%;
+}
+
 .preview-img img {
     max-height: 200px;
 }
@@ -100,6 +104,7 @@ h2 {
 .item {
     height: 500px;
 }
+
 
 /*
  * Off Canvas
