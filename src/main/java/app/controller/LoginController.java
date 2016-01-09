@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
@@ -27,14 +28,28 @@ public class LoginController {
 
         if (user != null) {
             if (user.getPassword().equals(password)) {
-                Cookie cookie = new Cookie("admin_sid", "logged");
-                cookie.setMaxAge(60);
+                Cookie cookie = new Cookie("admin_sid", user.getName());
+                cookie.setMaxAge(30*60);
                 response.addCookie(cookie);
-                return "{status: 'success'}";
+                return "1";
             } else {
-                return "wrong";
+                return "0";
             }
         }
-        return "error";
+        return null;
     }
+
+    @RequestMapping("/logout")
+    public void logout(HttpServletRequest request, HttpServletResponse response) {
+        Cookie[] cookies = request.getCookies();
+
+        for (int i = 0; i < cookies.length; i++) {
+            if (cookies[i].getName().equals("admin_sid")) {
+                cookies[i].setMaxAge(0);
+                response.addCookie(cookies[i]);
+                break;
+            }
+        }
+    }
+
 }

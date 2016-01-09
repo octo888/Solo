@@ -1,23 +1,40 @@
 
 (function() {
     angular.module("soloApp")
-        .factory("AdminService", ['$http', AdminService]);
+        .factory("AdminService", ['$http', '$location', '$rootScope', AdminService]);
 
-    function AdminService($http) {
+    function AdminService($http, $location, $rootScope) {
         return {
             authenticate: authenticate,
+            logout: logout,
             removeBook: removeBook,
             getOrders: getOrders
         };
 
-        function authenticate(username, password) {
+        function authenticate(user) {
             return $http({
-                method: "POST",
+                method: 'POST',
                 url: "/loginUser",
                 responseType: "json",
-                params: {username: username, password: password}
+                params: {username: user.username, password: user.password}
             }).then(function (response) {
-                console.log(response);
+                if (response.data == 1) {
+                    $rootScope.authenticated = true;
+                    $location.path("/");
+                }
+                return response.data;
+            });
+        }
+
+        function logout() {
+            return $http({
+                url: "/logout",
+                responseType: "json"
+            }).then(function (response) {
+                $rootScope.authenticated = false;
+                $location.path("/");
+                window.location.reload();
+                return response;
             });
         }
 

@@ -25,15 +25,18 @@ soloApp.config(['$routeProvider', '$httpProvider',
             }).
             when('/admin/add-book', {
                 templateUrl: 'partials/admin/add-book.html',
-                controller: 'AdminCtrl'
+                controller: 'AdminCtrl',
+                requireLogin: true
             }).
             when('/admin/remove-book', {
                 templateUrl: 'partials/admin/remove-book.html',
-                controller: 'AdminCtrl'
+                controller: 'AdminCtrl',
+                requireLogin: true
             }).
             when('/admin/orders', {
                 templateUrl: 'partials/admin/orders.html',
-                controller: 'AdminCtrl'
+                controller: 'AdminCtrl',
+                requireLogin: true
             }).
             when('/book/:bookId', {
                 templateUrl: 'partials/book-detail.html',
@@ -57,10 +60,15 @@ soloApp.config(['$routeProvider', '$httpProvider',
 
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     }])
-    .run(function ($rootScope, $localStorage) {
+    .run(function ($rootScope, $location) {
 
-        //$rootScope.cartLength = $localStorage.cart.length;
-        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.$on('$routeChangeStart', function (event, next, curent) {
             $rootScope.alertClean();
+
+            if (next.requireLogin) {
+                if (!$rootScope.authenticated) {
+                    $location.path('login');
+                }
+            }
         });
     });

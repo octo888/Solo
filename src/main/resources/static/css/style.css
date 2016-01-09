@@ -21,6 +21,10 @@ body {
     display: none !important;
 }
 
+a {
+    cursor: pointer;
+}
+
 #topNav {
     background: #5c2e91;
 }
