@@ -5,11 +5,15 @@ import app.entity.User;
 import app.repository.RoleRepository;
 import app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
+import javax.xml.bind.DatatypeConverter;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -36,9 +40,11 @@ public class InitDBService {
             User userAdmin = new User();
             userAdmin.setEnabled(true);
             userAdmin.setName("admin");
-            userAdmin.setPassword("admin");
-            /*BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            userAdmin.setPassword(encoder.encode("admin"));*/
+
+            String salt = BCrypt.gensalt(12);
+            String hashed_password = BCrypt.hashpw("admin", salt);
+            userAdmin.setPassword(hashed_password);
+
             List<Role> roles = new ArrayList<>();
             roles.add(roleAdmin);
             roles.add(roleUser);

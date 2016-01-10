@@ -4,6 +4,8 @@ import app.entity.User;
 import app.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +29,7 @@ public class LoginController {
         User user = userService.findByName(username);
 
         if (user != null) {
-            if (user.getPassword().equals(password)) {
+            if (BCrypt.checkpw(password, user.getPassword())) {
                 Cookie cookie = new Cookie("admin_sid", user.getName());
                 cookie.setMaxAge(30*60);
                 response.addCookie(cookie);
