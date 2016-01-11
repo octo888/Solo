@@ -5,6 +5,7 @@
 
     function LoginCtrl($scope, AdminService) {
         $scope.login = login;
+        $scope.cleanErrors = cleanErrors;
 
         function login() {
             AdminService.authenticate($scope.credentials).then(function(data) {
@@ -13,6 +14,10 @@
                     $scope.errors.wrong = true;
                 }
             });
+        }
+
+        function cleanErrors() {
+            $scope.errors = {};
         }
     }
 }());

@@ -8,7 +8,7 @@ var soloFilters = angular.module('soloFilters', []);
 soloFilters.filter('descsize', function () {
     return function (input) {
         if (input != null) {
-            return input.substring(0, 70) + '...';
+            return input.substring(0, 150) + '...';
         } else return null;
     }
 });

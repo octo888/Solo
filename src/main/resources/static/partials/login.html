@@ -1,7 +1,15 @@
 <link href="../css/signin.css" rel="stylesheet">
 
-<form class="form-signin" role="form" ng-submit="login()" >
-    <h2 class="form-signin-heading">Пожалуйста ввойдите</h2>
+<form class="form-signin" name="form" role="form" ng-submit="login()" >
+
+    <div ng-show="form.$submitted">
+        <div ng-if="errors.wrong" class="alert alert-danger alert-block fade in">
+            <button type="button" ng-click="cleanErrors()"  class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>Неправильное имя пользователя или пароль</p>
+        </div>
+    </div>
 
     <input type="text" name="username" id="username"
            ng-model="credentials.username" class="form-control" placeholder="Login" required autofocus>

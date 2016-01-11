@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-xs-12 col-sm-4">
         <div class="book-images">
-            <img class="img" ng-src="/image/{{book.image.id}}" height="400" width="300">
+            <img class="img" ng-src="/image/{{book.image.id}}" height="400" width="250">
             <br/>
             <br/>
-            <p><a class="btn btn-success" href="/book/{{book.id}}" role="button">Купить за {{book.price}} грн. &raquo;</a></p>
+            <p><a class="btn btn-success" ng-click="addToCart(book)" role="button">Купить за {{book.price}} грн. &raquo;</a></p>
         </div>
         <!--<ul class="phone-thumbs list-unstyled">
             <li ng-repeat="img in phone.images">
