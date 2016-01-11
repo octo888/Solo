@@ -64,6 +64,7 @@ footer {
 
 #bookDesc {
     text-align: justify;
+    height: 120px;
 }
 
 .jumbotron {
@@ -105,8 +106,7 @@ h2 {
 }
 
 .item {
-    margin: 10px;
-    padding: 10px;
+    height: 500px;
 }
 
 
