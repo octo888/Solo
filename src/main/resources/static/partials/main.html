@@ -1,0 +1,84 @@
+<div class="row">
+
+    <div class="col-sm-12">
+
+        <h1 class="text-center">Книги</h1>
+        <hr style="border-top: 3px solid #eee"/>
+       <!-- <div class="row">
+            <div  id="sidebar">
+                <h3 class="text-center">Фильтр книг</h3>
+
+                <div class="list-group">
+                    <div class="list-group-item text-center">
+                        <form>
+                            <input type="text" class="form-control" placeholder="Поиск..." ng-model="search.name">
+                        </form>
+
+                        <form>
+                            <h5>Выберите ценовой диапозон: </h5>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="price" ng-value="100"> 0 - 100
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio"  ng-model="price" ng-value="300"> 100 - 300
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio"  ng-model="price" ng-value="500"> 300 - 500
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio"  ng-model="price" ng-value="0"> Все книги
+                                </label>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+            <div class="col-xs-12 col-sm-6 col-lg-3"
+                 ng-repeat="book in books | filter: search | orderBy: 'name' | selectedPrice: price ">
+                <div class="item">
+
+                    <a ng-href="#/book/{{book.id}}">
+                        <img ng-src="/image/{{book.image.id}}"
+                             height="280" width="210" alt="{{book.name}}"/>
+                        <div class="info">
+                            <p>{{book.description | descsize}}</p>
+                        </div>
+                    </a>
+
+                    <!--<div class="label label-success price">
+                        <span class="glyphicon glyphicon-tag"></span> {{book.price}} грн.
+                    </div>-->
+
+                </div>
+
+                <a ng-href="#/book/{{book.id}}" class="itemTitle" data-toggle="tooltip" data-placement="right"
+                   title="{{book.name}}"><h4 align="center">{{book.name}}</h4></a>
+                <!--<p id="bookDesc" >{{book.description | descsize}}</p>-->
+
+                <p class="text-center"><!--<a class="btn btn-primary" ng-href="#/book/{{book.id}}" role="button">Подробнее &raquo;</a>-->
+                    <a class="btn btn-primary"  ng-click="addToCart(book)" role="button">Купить за {{book.price}} грн. &raquo;</a></p>
+
+            </div>
+
+
+    </div>
+    <!--/.col-xs-12.col-sm-8-->
+
+</div><!--/row-->
+
+

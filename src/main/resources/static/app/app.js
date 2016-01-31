@@ -16,8 +16,8 @@ soloApp.config(['$routeProvider', '$httpProvider',
 
         $routeProvider.
             when('/', {
-                templateUrl: './partials/home.html',
-                controller: 'HomeCtrl'
+                templateUrl: './partials/main.html',
+                controller: 'MainCtrl'
             }).
             when('/login', {
                 templateUrl: 'partials/login.html',

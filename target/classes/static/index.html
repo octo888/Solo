@@ -51,13 +51,18 @@
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
-
-<div class="container-fluid">
-    <ng-view></ng-view>
+<div class="jumbotron text-center">
+    <h1>SoloBook</h1>
 </div>
 
-
-
+<div class="container">
+    <ng-view></ng-view>
+</div>
+<br>
+<hr/>
+<footer>
+    Text
+</footer>
 
 
 <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
@@ -77,7 +82,7 @@
 <script type="text/javascript" src="./app/controllers/AdminCtrl.js"></script>
 <script type="text/javascript" src="./app/controllers/BookCtrl.js"></script>
 <script type="text/javascript" src="./app/controllers/CartCtrl.js"></script>
-<script type="text/javascript" src="./app/controllers/HomeCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/MainCtrl.js"></script>
 <script type="text/javascript" src="./app/controllers/OrderCtrl.js"></script>
 
 <script type="text/javascript" src="./app/filters.js"></script>

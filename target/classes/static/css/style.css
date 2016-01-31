@@ -12,9 +12,9 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background: url("../images/lightpaperfibers.png");
+   /* background: url("../images/lightpaperfibers.png");*/
     padding-top: 70px;
-    margin-bottom: 190px;
+    margin-bottom: 100px;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -23,13 +23,19 @@ body {
 
 a {
     cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    text-underline: none;
 }
 
 #topNav {
-    background: #5c2e91;
+    background: rgb(138,78,132);
 }
 #topNav a {
-    color: #fff;
+    color: black;
 }
 
 .dropdown-menu  {
@@ -37,21 +43,21 @@ a {
 }
 
 li.dropdown.open > a:focus {
-    background:#793EBD
+    background:#793EBD;
 }
 
 .btn-primary {
-     background: #5c2e91;
-     border-color: #5c2e91;
+     background: rgb(138,78,132);
+     border-color: rgb(138,78,132);
  }
 
 .btn-primary:hover {
-    background-color:#793EBD;
+    background-color:#5c2e91;
 }
 
 footer {
-    background: #333;
-    color: #eee;
+    background: rgb(138,78,132);
+    color: black;
     font-size: 11px;
     padding: 20px;
 
@@ -59,13 +65,9 @@ footer {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 170px;
+    height: 80px;
 }
 
-#bookDesc {
-    text-align: justify;
-    height: 130px;
-}
 
 .jumbotron {
     background: url(../images/logo.jpg) no-repeat 50% 50%;
@@ -82,7 +84,7 @@ footer {
     position: relative;
 }
 
-.preview-img .label {
+.label {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -95,18 +97,43 @@ footer {
 }
 
 .preview-img img {
-    max-height: 200px;
+    max-height: 280px;
 }
 
-h2 {
+.itemTitle {
     font-size: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #555;
 }
 
-.item {
-    height: 500px;
+.item img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.info {
+    padding: 5px 10px;
+    top: 0;
+    left: 50%;
+    margin-left: -105px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+    background: black;
+    height: 280px;
+    width: 210px;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.info:hover {
+    opacity: 0.7;
 }
 
 
