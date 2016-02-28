@@ -2,10 +2,14 @@ package app.entity;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 @Table(name = "books")
 public class Book extends Product {
+
+    @ElementCollection
+    private Map<String,String> charact;
 
     private String author;
 
@@ -19,9 +23,8 @@ public class Book extends Product {
 
     private String cover;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "image_id")
-    private Image image;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Image> images;
 
     public String getAuthor() {
         return author;
@@ -71,11 +74,19 @@ public class Book extends Product {
         this.cover = cover;
     }
 
-    public Image getImage() {
-        return image;
+    public List<Image> getImages() {
+        return images;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    public Map<String, String> getCharact() {
+        return charact;
+    }
+
+    public void setCharact(Map<String, String> charact) {
+        this.charact = charact;
     }
 }

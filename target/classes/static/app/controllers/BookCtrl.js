@@ -1,6 +1,4 @@
-/**
- * Created by Viktor Moroz on 12/2/15.
- */
+
 
 (function() {
     'use strict';
@@ -12,6 +10,7 @@
 
         BookService.getBookDetails(bookId).then(function(data) {
             $scope.book = data;
+            $scope.images = data.images;
         });
     }
 }());

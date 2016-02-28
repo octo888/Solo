@@ -8,6 +8,7 @@
     "modernizr": "~2.6.2",
     "angular-route": "1.4.x",
     "angular-animate": "1.4.x",
-    "angular-cookies": "1.4.x"
+    "angular-cookies": "1.4.x",
+    "ng-file-upload": "^12.0.1"
   }
 }

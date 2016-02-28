@@ -1,6 +1,3 @@
-/**
- * Created by Viktor Moroz on 12/2/15.
- */
 
 (function() {
     'use strict';
@@ -13,25 +10,42 @@
         $scope.getBooks = getBooks;
         $scope.getOrders = getOrders;
 
+        $scope.inputs = [];
+        $scope.addField=function(){
+            $scope.inputs.push({});
+        };
+
+
+
         function getBooks() {
             BookService.getAllBooks().then(function(data){
                 $scope.books = data;
             });
         }
+
+
+
         function addBook () {
-            var file = $scope.file;
+
+            var inputs = angular.toJson($scope.inputs);
+            var file1 = $scope.file1;
+            var file2 = $scope.file2;
+            var file3 = $scope.file3;
+            var file4 = $scope.file4;
+
             var fd = new FormData();
             fd.append('name', $scope.name);
-            fd.append('author', $scope.author);
             fd.append('desc', $scope.desc);
             fd.append('price', $scope.price);
-            fd.append('publisher', $scope.publisher);
-            fd.append('publishYear', $scope.publishYear);
-            fd.append('isbn', $scope.isbn);
-            fd.append('cover', $scope.cover);
-            fd.append('file', file);
 
+            fd.append('charact', inputs);
+
+            fd.append('file1', file1);
+            fd.append('file2', file2);
+            fd.append('file3', file3);
+            fd.append('file4', file4);
             fileUpload.uploadFileToUrl(fd, "/addbook");
+
             $route.reload();
         }
 

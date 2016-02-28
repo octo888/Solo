@@ -1,6 +1,3 @@
-/**
- * Created by Viktor Moroz on 12/2/15.
- */
 
 (function() {
     angular.module('soloApp')

@@ -4,7 +4,6 @@ import app.entity.Book;
 import app.entity.Image;
 import app.repository.BookRepository;
 import app.repository.ImageRepository;
-import app.repository.SouvenirRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +17,6 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    @Autowired
-    private SouvenirRepository souvenirRepository;
 
     @Autowired
     private ImageRepository imageRepository;
@@ -35,6 +32,11 @@ public class BookService {
     public Image getImage(long id) {
         return imageRepository.findOne(id);
     }
+
+   /* public List<Image> getImages(long id) {
+        Book book = bookRepository.findOne(id);
+        return imageRepository.findByBook(book);
+    }*/
 
     public Book findOne(Long id) {
         return bookRepository.findOne(id);

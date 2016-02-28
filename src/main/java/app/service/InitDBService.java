@@ -28,6 +28,7 @@ public class InitDBService {
 
     @PostConstruct
     public void init() {
+
         if (roleRepository.findByName("ROLE_ADMIN") == null) {
             Role roleUser = new Role();
             roleUser.setName("ROLE_USER");

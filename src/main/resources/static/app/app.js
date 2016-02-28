@@ -6,6 +6,7 @@ var soloApp = angular.module('soloApp', [
     'ngRoute',
     'ngStorage',
     'ngCookies',
+    'ngFileUpload',
 
     'soloFilters',
     'soloDirectives'
