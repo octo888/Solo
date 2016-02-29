@@ -16,7 +16,7 @@ public class Image {
     @Basic(fetch = FetchType.LAZY)
     private byte[] body;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "book_id")
     private Book book;
 

@@ -26,7 +26,7 @@ public class Book extends Product {
     @ElementCollection
     private List<Long> imagesId;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Image> images;
 
     public String getAuthor() {

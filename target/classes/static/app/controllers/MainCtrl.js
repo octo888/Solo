@@ -7,6 +7,7 @@
 
     function MainCtrl($scope, BookService) {
         BookService.getAllBooks().then(function(data){
+            console.log(data);
             $scope.books = data;
         });
     }

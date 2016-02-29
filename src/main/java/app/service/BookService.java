@@ -43,7 +43,20 @@ public class BookService {
     }
 
     public List findAll() {
-        return bookRepository.findAll();
+
+        List<Book> books = bookRepository.findAll();
+
+        for (Book b : books) {
+            List<Image> imgs = imageRepository.findByBook(b);
+
+            List<Long> listId = new ArrayList<>();
+
+            for (Image i : imgs) {
+                listId.add(i.getId());
+            }
+            b.setImages(null);
+        }
+        return books;
     }
 
     public void removeBook(Long id) {
@@ -60,6 +73,7 @@ public class BookService {
             listId.add(i.getId());
         }
         book.setImagesId(listId);
+        book.setImages(null);
         return book;
     }
 }
