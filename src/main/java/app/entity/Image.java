@@ -16,12 +16,22 @@ public class Image {
     @Basic(fetch = FetchType.LAZY)
     private byte[] body;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "book_id")
+    private Book book;
+
     public Image() {
     }
 
     public Image(String name, byte[] body) {
         this.name = name;
         this.body = body;
+    }
+
+    public Image(String name, byte[] body, Book book) {
+        this.name = name;
+        this.body = body;
+        this.book = book;
     }
 
     public Long getId() {
@@ -46,5 +56,13 @@ public class Image {
 
     public void setBody(byte[] body) {
         this.body = body;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 }

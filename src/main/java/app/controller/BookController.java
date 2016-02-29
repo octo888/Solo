@@ -34,7 +34,7 @@ public class BookController {
 
     @RequestMapping("/getBook")
     public Book getBook(@RequestParam("bookId") Long id) {
-        return bookService.findOne(id);
+        return bookService.findWithImage(id);
     }
 
    /* @RequestMapping("/getImages")
@@ -75,10 +75,10 @@ public class BookController {
         book.setCharact(map);
 
         List<Image> images = new ArrayList<>();
-        images.add(image1.isEmpty() ? null : new Image(image1.getOriginalFilename(), image1.getBytes()));
-        images.add(image2.isEmpty() ? null : new Image(image2.getOriginalFilename(), image2.getBytes()));
-        images.add(image3.isEmpty() ? null : new Image(image3.getOriginalFilename(), image3.getBytes()));
-        images.add(image4.isEmpty() ? null : new Image(image4.getOriginalFilename(), image4.getBytes()));
+        images.add(image1.isEmpty() ? null : new Image(image1.getOriginalFilename(), image1.getBytes(), book));
+        images.add(image2.isEmpty() ? null : new Image(image2.getOriginalFilename(), image2.getBytes(), book));
+        images.add(image3.isEmpty() ? null : new Image(image3.getOriginalFilename(), image3.getBytes(), book));
+        images.add(image4.isEmpty() ? null : new Image(image4.getOriginalFilename(), image4.getBytes(), book));
 
         book.setImages(images);
         bookService.save(book);

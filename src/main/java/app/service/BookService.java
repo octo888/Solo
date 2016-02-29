@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -16,7 +17,6 @@ public class BookService {
 
     @Autowired
     private BookRepository bookRepository;
-
 
     @Autowired
     private ImageRepository imageRepository;
@@ -48,5 +48,18 @@ public class BookService {
 
     public void removeBook(Long id) {
         bookRepository.delete(id);
+    }
+
+    public Book findWithImage(Long id) {
+        Book book = bookRepository.findOne(id);
+        List<Image> imgs = imageRepository.findByBook(book);
+
+        List<Long> listId = new ArrayList<>();
+
+        for (Image i : imgs) {
+            listId.add(i.getId());
+        }
+        book.setImagesId(listId);
+        return book;
     }
 }

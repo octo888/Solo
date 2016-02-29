@@ -9,8 +9,9 @@
         var bookId = $routeParams.bookId;
 
         BookService.getBookDetails(bookId).then(function(data) {
+            console.log(data);
             $scope.book = data;
-            $scope.images = data.images;
+           // $scope.images = data.images;
         });
     }
 }());

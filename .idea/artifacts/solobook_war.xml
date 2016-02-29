@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="solobook:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="solo-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="solobook:war exploded" />
-    </root>
-  </artifact>
-</component>

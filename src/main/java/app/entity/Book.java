@@ -23,7 +23,10 @@ public class Book extends Product {
 
     private String cover;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ElementCollection
+    private List<Long> imagesId;
+
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Image> images;
 
     public String getAuthor() {
@@ -88,5 +91,13 @@ public class Book extends Product {
 
     public void setCharact(Map<String, String> charact) {
         this.charact = charact;
+    }
+
+    public List<Long> getImagesId() {
+        return imagesId;
+    }
+
+    public void setImagesId(List<Long> imagesId) {
+        this.imagesId = imagesId;
     }
 }
