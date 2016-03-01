@@ -20,6 +20,10 @@ public class Image {
     @JoinColumn(name = "book_id")
     private Book book;
 
+    @ManyToOne
+    @JoinColumn(name = "item_id")
+    private Item item;
+
     public Image() {
     }
 
@@ -34,6 +38,11 @@ public class Image {
         this.book = book;
     }
 
+    public Image(String name, byte[] body, Item item) {
+        this.name = name;
+        this.body = body;
+        this.book = book;
+    }
     public Long getId() {
         return id;
     }
@@ -64,5 +73,13 @@ public class Image {
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

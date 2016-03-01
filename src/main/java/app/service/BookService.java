@@ -33,11 +33,6 @@ public class BookService {
         return imageRepository.findOne(id);
     }
 
-   /* public List<Image> getImages(long id) {
-        Book book = bookRepository.findOne(id);
-        return imageRepository.findByBook(book);
-    }*/
-
     public Book findOne(Long id) {
         return bookRepository.findOne(id);
     }
