@@ -1,8 +1,3 @@
-/**
- * Created by Viktor Moroz on 12/15/15.
- */
-
-
 module.exports = function(grunt) {
     'use strict';
 
@@ -12,16 +7,16 @@ module.exports = function(grunt) {
         concat : {
             js_app : {
                 src : ['app/app.js', 'app/services/fileUpload.js', 'app/services/*.js', 'app/controllers/*.js', 'app/**/*.js'],
-                dest : appDirectory + '/js/application.js'
+                dest : appDirectory + '/application.js'
             },
             js_vendor : {
                 src : getVendorJsLibs(),
-                dest : appDirectory + '/js/vendor.js'
-            },
-            css_vendor : {
-                src : ['lib/**/*.css'],
-                dest : appDirectory + '/css/vendor.css'
+                dest : appDirectory + '/vendor.js'
             }
+            //css_vendor : {
+              //  src : ['lib/**/*.css'],
+                //dest : appDirectory + '/css/vendor.css'
+            //}
         },
         clean : [appDirectory],
         uglify : {
@@ -63,7 +58,7 @@ module.exports = function(grunt) {
    // grunt.loadNpmTasks('grunt-contrib-less');
 
     function getVendorJsLibs() {
-        return ['jquery', 'angular','angular-translate', 'angular-cookies',  'angular-translate-loader-url', 'angular-route', 'bootstrap']
+        return ['jquery', 'angular','angular-translate', 'angular-cookies',  'angular-translate-loader-url', 'angular-route', 'ngStorage', 'bootstrap']
             .map(function(lib) {
                 return lib.indexOf("angular") === 0 ?
                 "lib/angular/" + lib + ".min.js" : "lib/" + lib + ".min.js";

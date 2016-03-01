@@ -1,20 +1,8 @@
 'use strict';
 
-/* App Module */
-
-var soloApp = angular.module('soloApp', [
-    'ngRoute',
-    'ngStorage',
-    'ngCookies',
-    'ngFileUpload',
-
-    'soloFilters',
-    'soloDirectives'
-]);
-
-soloApp.config(['$routeProvider', '$httpProvider',
-    function ($routeProvider, $httpProvider) {
-
+angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ngStorage'])
+    .config(['$translateProvider', '$httpProvider', '$routeProvider', function ($translateProvider, $httpProvider, $routeProvider) {
+        'use strict';
         $routeProvider.
             when('/', {
                 templateUrl: './partials/main.html',
