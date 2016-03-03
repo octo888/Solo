@@ -2,7 +2,7 @@
 
     <div class="col-sm-12">
 
-        <h1 class="text-center">Книги</h1>
+        <h1 class="text-center">{{'main.section.book' | translate }}</h1>
         <hr style="border-top: 3px solid #eee"/>
        <!-- <div class="row">
             <div  id="sidebar">
@@ -71,7 +71,7 @@
                 <!--<p id="bookDesc" >{{book.description | descsize}}</p>-->
 
                 <p class="text-center"><!--<a class="btn btn-primary" ng-href="#/book/{{book.id}}" role="button">Подробнее &raquo;</a>-->
-                    <a class="btn btn-primary"  ng-click="addToCart(item)" role="button">Купить за {{item.price}} грн. &raquo;</a></p>
+                    <a class="btn btn-primary"  ng-click="addToCart(item)" role="button">{{'main.buy' | translate }} за {{item.price}} грн. &raquo;</a></p>
 
             </div>
 

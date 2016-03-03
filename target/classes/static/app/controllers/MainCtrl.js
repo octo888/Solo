@@ -5,7 +5,6 @@
 
     function MainCtrl($scope, ItemService) {
         ItemService.getAllItems().then(function(data){
-            console.log(data);
             $scope.items = data;
         });
     }

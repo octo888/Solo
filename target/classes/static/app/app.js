@@ -3,6 +3,19 @@
 angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ngStorage'])
     .config(['$translateProvider', '$httpProvider', '$routeProvider', function ($translateProvider, $httpProvider, $routeProvider) {
         'use strict';
+
+        var lang = "ru";
+        angular.injector(['ngCookies']).invoke(['$cookies', function($cookies) {
+            lang = $cookies.get("lang");
+            if (!lang) {
+                lang = "ru";
+            }
+        }]);
+
+        $translateProvider.useUrlLoader("/messages/" + lang + ".json");
+        $translateProvider.useSanitizeValueStrategy('escape');
+        $translateProvider.preferredLanguage(lang);
+
         $routeProvider.
             when('/', {
                 templateUrl: './partials/main.html',
