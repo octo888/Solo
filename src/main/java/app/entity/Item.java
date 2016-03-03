@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Entity
+@Table(name = "items")
 public class Item {
 
     @Id
@@ -33,7 +34,7 @@ public class Item {
     @ElementCollection
     private List<Long> imagesId;
 
-    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Image> images;
 
     public Long getId() {

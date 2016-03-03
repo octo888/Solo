@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
 
-@RestController("/rest/item")
+@RestController
 public class ItemController {
 
     @Autowired
@@ -79,16 +79,5 @@ public class ItemController {
 
     }
 
-    @RequestMapping("/image/{file_id}")
-    public void getImage(HttpServletRequest request, HttpServletResponse response, @PathVariable("file_id") long id) throws IOException {
-        try {
-            Image content = itemService.getImage(id);
-            response.setContentType("image/jpeg, image/jpg, image/png, image/gif");
-            response.getOutputStream().write(content.getBody());
-            response.getOutputStream().flush();
-            response.getOutputStream().close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 }

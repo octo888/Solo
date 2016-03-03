@@ -49,14 +49,14 @@
         </div>-->
 
             <div class="col-xs-12 col-sm-6 col-lg-3"
-                 ng-repeat="book in books | filter: search | orderBy: 'name' | selectedPrice: price ">
+                 ng-repeat="item in items | filter: search | orderBy: 'name' | selectedPrice: price ">
                 <div class="item">
 
-                    <a ng-href="#/book/{{book.id}}">
-                        <img ng-src="/image/{{book.imagesId[0]}}"
-                             height="280" width="210" alt="{{book.name}}"/>
+                    <a ng-href="#/item/{{item.id}}">
+                        <img ng-src="/image/{{item.imagesId[0]}}"
+                             height="280" width="210" alt="{{item.name}}"/>
                         <div class="info">
-                            <p>{{book.description | descsize}}</p>
+                            <p>{{item.description | descsize}}</p>
                         </div>
                     </a>
 
@@ -66,12 +66,12 @@
 
                 </div>
 
-                <a ng-href="#/book/{{book.id}}" class="itemTitle" data-toggle="tooltip" data-placement="right"
-                   title="{{book.name}}"><h4 align="center">{{book.name}}</h4></a>
+                <a ng-href="#/item/{{item.id}}" class="itemTitle" data-toggle="tooltip" data-placement="right"
+                   title="{{item.name}}"><h4 align="center">{{item.name}}</h4></a>
                 <!--<p id="bookDesc" >{{book.description | descsize}}</p>-->
 
                 <p class="text-center"><!--<a class="btn btn-primary" ng-href="#/book/{{book.id}}" role="button">Подробнее &raquo;</a>-->
-                    <a class="btn btn-primary"  ng-click="addToCart(book)" role="button">Купить за {{book.price}} грн. &raquo;</a></p>
+                    <a class="btn btn-primary"  ng-click="addToCart(item)" role="button">Купить за {{item.price}} грн. &raquo;</a></p>
 
             </div>
 

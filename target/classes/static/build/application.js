@@ -12,13 +12,13 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
                 templateUrl: 'partials/login.html',
                 controller: 'LoginCtrl'
             }).
-            when('/admin/add-book', {
-                templateUrl: 'partials/admin/add-book.html',
+            when('/admin/add-item', {
+                templateUrl: 'partials/admin/add-item.html',
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
-            when('/admin/remove-book', {
-                templateUrl: 'partials/admin/remove-book.html',
+            when('/admin/remove-item', {
+                templateUrl: 'partials/admin/remove-item.html',
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
@@ -27,9 +27,9 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
-            when('/book/:bookId', {
-                templateUrl: 'partials/book-detail.html',
-                controller: 'BookCtrl'
+            when('/item/:itemId', {
+                templateUrl: 'partials/item-detail.html',
+                controller: 'ItemCtrl'
             }).
             when('/cart', {
                 templateUrl: 'partials/cart.html',
@@ -142,9 +142,6 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
         }
     }
 }());
-/**
- * Created by Viktor Moroz on 12/2/15.
- */
 
 (function() {
     angular.module("soloApp")
@@ -261,12 +258,43 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
 }());
 
 (function() {
+    angular.module("soloApp")
+        .factory("ItemService", ['$http', ItemService]);
+
+    function ItemService($http) {
+        return {
+            getAllItems: getAllItems,
+            getItemDetails: getItemDetails
+        };
+
+        function getAllItems() {
+            return $http({
+                url: "/getAllItems",
+                responseType: "json"
+            }).then(function (response) {
+                return response.data;
+            });
+        }
+
+        function getItemDetails(itemId) {
+            return $http({
+                url: "/getItem",
+                responseType: "json",
+                params: {itemId: itemId}
+            }).then(function (response) {
+                return response.data;
+            });
+        }
+    }
+}());
+
+(function() {
     'use strict';
     angular.module('soloApp')
         .controller('AdminCtrl', ['$scope', '$route', 'fileUpload', 'BookService', 'AdminService', AdminCtrl]);
 
     function AdminCtrl($scope, $route, fileUpload, BookService, AdminService) {
-        $scope.addBook = addBook;
+        $scope.addItem = addItem;
         $scope.removeBook = removeBook;
         $scope.getBooks = getBooks;
         $scope.getOrders = getOrders;
@@ -276,18 +304,13 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
             $scope.inputs.push({});
         };
 
-
-
         function getBooks() {
             BookService.getAllBooks().then(function(data){
                 $scope.books = data;
             });
         }
 
-
-
-        function addBook () {
-
+        function addItem () {
             var inputs = angular.toJson($scope.inputs);
             var file1 = $scope.file1;
             var file2 = $scope.file2;
@@ -305,7 +328,7 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
             fd.append('file2', file2);
             fd.append('file3', file3);
             fd.append('file4', file4);
-            fileUpload.uploadFileToUrl(fd, "/addbook");
+            fileUpload.uploadFileToUrl(fd, "/addItem");
 
             $route.reload();
         }
@@ -349,8 +372,8 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
             AdminService.logout();
         }
 
-        function addToCart(book) {
-            CartService.addToCart(book);
+        function addToCart(item) {
+            CartService.addToCart(item);
         }
 
         function checkSession() {
@@ -425,6 +448,40 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
 (function() {
     'use strict';
     angular.module('soloApp')
+        .controller('ItemCtrl', ['$scope', '$routeParams', 'ItemService', ItemCtrl]);
+
+    function ItemCtrl($scope, $routeParams, ItemService) {
+        var itemId = $routeParams.itemId;
+
+
+        ItemService.getItemDetails(itemId).then(function(data) {
+            $scope.item = data;
+            $scope.mainImg = data.imagesId[0];
+            $scope.images = getMinImg(data.imagesId, $scope.mainImg);
+
+        });
+
+        $scope.setImage = function(imageUrl) {
+            $scope.mainImg = imageUrl;
+            $scope.images = getMinImg($scope.item.imagesId, imageUrl);
+        };
+
+        function getMinImg(arr, val) {
+            var res = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                if (val !== arr[i]) {
+                    res.push(arr[i]);
+                }
+            }
+            return res;
+        }
+    }
+}());
+
+(function() {
+    'use strict';
+    angular.module('soloApp')
         .controller('LoginCtrl', ['$scope', 'AdminService', LoginCtrl]);
 
     function LoginCtrl($scope, AdminService) {
@@ -446,17 +503,15 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
     }
 }());
 
-
-
 (function() {
     'use strict';
     angular.module('soloApp')
-        .controller('MainCtrl', ['$scope', 'BookService', MainCtrl]);
+        .controller('MainCtrl', ['$scope', 'ItemService', MainCtrl]);
 
-    function MainCtrl($scope, BookService) {
-        BookService.getAllBooks().then(function(data){
+    function MainCtrl($scope, ItemService) {
+        ItemService.getAllItems().then(function(data){
             console.log(data);
-            $scope.books = data;
+            $scope.items = data;
         });
     }
 }());

@@ -54,14 +54,9 @@ public class ItemService {
         return items;
     }
 
-    public void removeItem(Long id) {
-        itemRepository.delete(id);
-    }
-
     public Item findWithImagesId(Long id) {
         Item item = itemRepository.findOne(id);
         List<Image> imgs = imageRepository.findByItem(item);
-
         List<Long> listId = new ArrayList<>();
 
         for (Image i : imgs) {
@@ -71,4 +66,10 @@ public class ItemService {
         item.setImages(null);
         return item;
     }
+
+    public void removeItem(Long id) {
+        itemRepository.delete(id);
+    }
+
+
 }

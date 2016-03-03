@@ -41,7 +41,7 @@ public class Image {
     public Image(String name, byte[] body, Item item) {
         this.name = name;
         this.body = body;
-        this.book = book;
+        this.item = item;
     }
     public Long getId() {
         return id;

@@ -5,7 +5,7 @@
         .controller('AdminCtrl', ['$scope', '$route', 'fileUpload', 'BookService', 'AdminService', AdminCtrl]);
 
     function AdminCtrl($scope, $route, fileUpload, BookService, AdminService) {
-        $scope.addBook = addBook;
+        $scope.addItem = addItem;
         $scope.removeBook = removeBook;
         $scope.getBooks = getBooks;
         $scope.getOrders = getOrders;
@@ -15,18 +15,13 @@
             $scope.inputs.push({});
         };
 
-
-
         function getBooks() {
             BookService.getAllBooks().then(function(data){
                 $scope.books = data;
             });
         }
 
-
-
-        function addBook () {
-
+        function addItem () {
             var inputs = angular.toJson($scope.inputs);
             var file1 = $scope.file1;
             var file2 = $scope.file2;
@@ -44,7 +39,7 @@
             fd.append('file2', file2);
             fd.append('file3', file3);
             fd.append('file4', file4);
-            fileUpload.uploadFileToUrl(fd, "/addbook");
+            fileUpload.uploadFileToUrl(fd, "/addItem");
 
             $route.reload();
         }

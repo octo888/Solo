@@ -1,14 +1,12 @@
-
-
 (function() {
     'use strict';
     angular.module('soloApp')
-        .controller('MainCtrl', ['$scope', 'BookService', MainCtrl]);
+        .controller('MainCtrl', ['$scope', 'ItemService', MainCtrl]);
 
-    function MainCtrl($scope, BookService) {
-        BookService.getAllBooks().then(function(data){
+    function MainCtrl($scope, ItemService) {
+        ItemService.getAllItems().then(function(data){
             console.log(data);
-            $scope.books = data;
+            $scope.items = data;
         });
     }
 }());

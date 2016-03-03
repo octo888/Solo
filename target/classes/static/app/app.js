@@ -12,13 +12,13 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
                 templateUrl: 'partials/login.html',
                 controller: 'LoginCtrl'
             }).
-            when('/admin/add-book', {
-                templateUrl: 'partials/admin/add-book.html',
+            when('/admin/add-item', {
+                templateUrl: 'partials/admin/add-item.html',
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
-            when('/admin/remove-book', {
-                templateUrl: 'partials/admin/remove-book.html',
+            when('/admin/remove-item', {
+                templateUrl: 'partials/admin/remove-item.html',
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
@@ -27,9 +27,9 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
                 controller: 'AdminCtrl',
                 requireLogin: true
             }).
-            when('/book/:bookId', {
-                templateUrl: 'partials/book-detail.html',
-                controller: 'BookCtrl'
+            when('/item/:itemId', {
+                templateUrl: 'partials/item-detail.html',
+                controller: 'ItemCtrl'
             }).
             when('/cart', {
                 templateUrl: 'partials/cart.html',

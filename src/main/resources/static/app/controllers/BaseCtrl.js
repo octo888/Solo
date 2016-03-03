@@ -20,8 +20,8 @@
             AdminService.logout();
         }
 
-        function addToCart(book) {
-            CartService.addToCart(book);
+        function addToCart(item) {
+            CartService.addToCart(item);
         }
 
         function checkSession() {

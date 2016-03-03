@@ -187,10 +187,11 @@ footer {
 }
 
 .book-images img {
-    max-width: 100%;
+    max-width: 250px;
+    max-height: 400px;
 }
 
-/*.phone-thumbs li {
+.phone-thumbs li {
     float: left;
     width: 30%;
     padding: 16px;
@@ -198,7 +199,7 @@ footer {
 
 .phone-thumbs li img {
     max-width: 100%;
-}*/
+}
 
 /*.specs li {
     display: inline-block;
