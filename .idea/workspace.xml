@@ -1,187 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84c2bbcc-3b4d-456c-9e26-3952d2080586" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/controller/CommonController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/app/controllers/ItemCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/ItemService.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/admin/add-book.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/static/partials/book-detail.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/admin/add-book.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/admin/add-item.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/book-detail.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/item-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/controller/BookController.class" afterPath="$PROJECT_DIR$/target/classes/app/controller/BookController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/service/BookService.class" afterPath="$PROJECT_DIR$/target/classes/app/service/BookService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/entity/Image.class" afterPath="$PROJECT_DIR$/target/classes/app/entity/Image.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/repository/ImageRepository.class" afterPath="$PROJECT_DIR$/target/classes/app/repository/ImageRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/images/boom.png" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/images/boom.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/images/hawk.png" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/images/hawk.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/images/logo.png" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/.travis.yml" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/.travis.yml" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/controllers/AdminCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/controllers/AdminCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/app/controllers/AdminCtrl.js" afterPath="$PROJECT_DIR$/target/classes/static/app/controllers/AdminCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/controllers/BaseCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/controllers/BaseCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/app/controllers/BaseCtrl.js" afterPath="$PROJECT_DIR$/target/classes/static/app/controllers/BaseCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/BookController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/BookController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/services/BookService.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/services/BookService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/app/services/BookService.js" afterPath="$PROJECT_DIR$/target/classes/static/app/services/BookService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Image.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/entity/Item.java" afterPath="$PROJECT_DIR$/src/main/java/app/entity/Item.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/controller/ItemController.java" afterPath="$PROJECT_DIR$/src/main/java/app/controller/ItemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/service/ItemService.java" afterPath="$PROJECT_DIR$/src/main/java/app/service/ItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/controllers/MainCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/controllers/MainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/app/controllers/MainCtrl.js" afterPath="$PROJECT_DIR$/target/classes/static/app/controllers/MainCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/README.md" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/app/app.js" afterPath="$PROJECT_DIR$/src/main/resources/static/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/app/app.js" afterPath="$PROJECT_DIR$/target/classes/static/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/build/application.js" afterPath="$PROJECT_DIR$/src/main/resources/static/build/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/build/application.js" afterPath="$PROJECT_DIR$/target/classes/static/build/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/apply" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/apply" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/arguments.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/arguments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/async/lib/async.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/async/lib/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/node-uuid/benchmark/bench.sh" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/node-uuid/benchmark/bench.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-clean/node_modules/rimraf/bin.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-clean/node_modules/rimraf/bin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/rimraf/bin.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/rimraf/bin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/browser.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/browser.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/build.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/build" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/build" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/cake" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/cake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/bin/cake" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/bin/cake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/cat.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/cat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/changelog" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/changelog" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/choice.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/choice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/has-ansi/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/has-ansi/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/strip-ansi/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/strip-ansi/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/supports-color/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/supports-color/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/strip-json-comments/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/strip-json-comments/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/mime/cli.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/mime/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/client.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/client.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/mkdirp/bin/cmd.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/mkdirp/bin/cmd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/coffee" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/bin/coffee" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/bin/coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/command.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/command.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/constants.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/exit/test/fixtures/create-files.sh" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/exit/test/fixtures/create-files.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/exit/test/fixtures/create-files.sh" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/exit/test/fixtures/create-files.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/crypto.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/crypto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/crypto.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/crypto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/echo.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/echo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/errno" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/errno" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/esprima/bin/esvalidate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/exec.sh" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/grunt-legacy-util/test/fixtures/exec.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/bin/extract-props.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/bin/extract-props.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/generate-docs.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/generate-docs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/glob.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/glob.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/.bin/har-validator" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/.bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/har-validator/bin/har-validator" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/har-validator/bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/has-ansi" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/has-ansi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/help.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/help.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/image-size" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/image-size" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/image-size/bin/image-size" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/image-size/bin/image-size" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/index.html" afterPath="$PROJECT_DIR$/target/classes/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/boom/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/bin/js-yaml.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/bin/js-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/js-yaml" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/js-yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/.bin/jshint" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/.bin/jshint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/jshint" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/jshint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/land" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/bin/land" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/.bin/lessc" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/.bin/lessc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/bin/lessc" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/bin/lessc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/long_desc.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/long_desc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/partials/main.html" afterPath="$PROJECT_DIR$/src/main/resources/static/partials/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/partials/main.html" afterPath="$PROJECT_DIR$/target/classes/static/partials/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/mime" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/mime" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/mkdirp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/nopt/examples/my-program.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/nopt/examples/my-program.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/nargs.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/nargs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/nopt/bin/nopt.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/nopt/bin/nopt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/nopt" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/nopt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/package.json" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/parents.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/parents.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/parser.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/coffee-script/lib/coffee-script/parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/prefix_chars.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/prefix_chars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/progress.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/progress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/progress.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/progress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/readme.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/readme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-clean/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-clean/node_modules/.bin/rimraf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/rimraf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/source-map/test/run-tests.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/source-map/test/run-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/run-tests.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/run-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/server.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/server.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/.bin/shjs" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/.bin/shjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/bin/shjs" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/bin/shjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/sort.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/sort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/spinner.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/spinner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/spinner.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/spinner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-sign" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-sign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-sign" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-sign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-verify" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/.bin/sshpk-verify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-verify" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/sshpk/bin/sshpk-verify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.coffee" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/cli/examples/static.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/stringify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/strip-ansi" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/strip-ansi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/.bin/strip-json-comments" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/.bin/strip-json-comments" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sub_commands.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sub_commands.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sum.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/sum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/supports-color" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-concat/node_modules/chalk/node_modules/.bin/supports-color" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/async/support/sync-package-managers.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/async/support/sync-package-managers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/test.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/errno/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/.bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/bin/uglifyjs" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-uglify/node_modules/uglify-js/bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/uri.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/uri.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/example/usage.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/example/usage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/utils.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/utils.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/hawk/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/utils.js" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/qs/test/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/node-uuid/bin/uuid" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/node-uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/which" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/.bin/which" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/which/bin/which" afterPath="$PROJECT_DIR$/target/classes/static/node_modules/grunt/node_modules/which/bin/which" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="84c2bbcc-3b4d-456c-9e26-3952d2080586" name="Default" comment="" />
     <ignored path="solo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -216,14 +36,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item-detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="item-detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/partials/item-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59778595" vertical-offset="54" max-vertical-offset="1296">
+            <state vertical-scroll-proportion="-12.0" vertical-offset="54" max-vertical-offset="1296">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22144112" vertical-offset="0" max-vertical-offset="569">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,7 +77,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/static/app/controllers/BookCtrl.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/app/entity/Book.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/partials/book-detail.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/app/directives/directives.js" />
@@ -275,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/app/controllers/ItemCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/static/partials/item-detail.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -1169,12 +999,12 @@
       <workItem from="1456931550017" duration="1294000" />
       <workItem from="1456933433574" duration="621000" />
       <workItem from="1456990178107" duration="1004000" />
-      <workItem from="1456992053215" duration="10947000" />
+      <workItem from="1456992053215" duration="12284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27245000" />
+    <option name="totallyTimeSpent" value="28582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1023" extended-state="0" />
@@ -1189,7 +1019,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921347" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32921347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1287,13 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37630662" vertical-offset="0" max-vertical-offset="574">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/partials/order-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
@@ -1382,14 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/SoloApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31090486" vertical-offset="38" max-vertical-offset="900">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,11 +1436,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/partials/item-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59778595" vertical-offset="54" max-vertical-offset="1296">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="54" max-vertical-offset="1296">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/SoloApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33567664" vertical-offset="115" max-vertical-offset="900">
+          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22144112" vertical-offset="0" max-vertical-offset="569">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
