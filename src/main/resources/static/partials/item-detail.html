@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div style="text-align: center">
-                    <a class="btn btn-success" ng-click="addToCart(item)" role="button">Купить за {{item.price}} грн. &raquo;</a>
+                    <a class="btn btn-primary" ng-click="addToCart(item)" role="button">Купить за {{item.price}} грн. &raquo;</a>
                 </div>
             </div>
         </div>
@@ -27,41 +27,12 @@
         <p>{{item.description}}</p>
         <hr>
         <ul class="specs list-unstyled">
-            <li>
-                <span><strong>Автор</strong></span>
+            <li ng-repeat="(key,value) in item.charact">
+                <span><strong>{{key}}:</strong></span>
                 <dl>
-                    <dd>{{item.author}}</dd>
+                    <dd>{{value}}</dd>
                 </dl>
             </li>
-
-            <li>
-                <span><strong>Издательство</strong></span>
-                <dl>
-                    <dd>{{item.publisher}}</dd>
-                </dl>
-            </li>
-
-            <li>
-                <span><strong>Год издания</strong></span>
-                <dl>
-                    <dd>{{item.publishYear}}</dd>
-                </dl>
-            </li>
-
-            <li>
-                <span><strong>Переплет</strong></span>
-                <dl>
-                    <dd>{{item.cover}}</dd>
-                </dl>
-            </li>
-
-            <li>
-                <span><strong>ISBN</strong></span>
-                <dl>
-                    <dd>{{item.isbn}}</dd>
-                </dl>
-            </li>
-
         </ul>
     </div>
 </div>

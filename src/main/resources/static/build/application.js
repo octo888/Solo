@@ -331,6 +331,7 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
             var file4 = $scope.file4;
 
             var fd = new FormData();
+            fd.append('category', $scope.category);
             fd.append('name', $scope.name);
             fd.append('desc', $scope.desc);
             fd.append('price', $scope.price);

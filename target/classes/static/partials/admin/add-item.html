@@ -3,6 +3,18 @@
        method="post">
 
     <div class="form-group">
+        <label for="bookName" class="col-sm-2 control-label">Категория:</label>
+
+        <div class="col-sm-8" >
+            <select ng-model="category" class="form-control">
+                <option ng-value="1">Книги</option>
+                <option ng-value="2">Сувениры</option>
+                <option ng-value="3">Ручная работа</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
         <label for="bookName" class="col-sm-2 control-label">Название:</label>
 
         <div class="col-sm-8">

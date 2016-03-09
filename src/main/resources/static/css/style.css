@@ -1,7 +1,8 @@
-/*
- * Style tweaks
- * --------------------------------------------------
- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,900,400italic,300italic,500italic,700italic,900italic,100,100italic);
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
 html,
 body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -12,14 +13,13 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-   /* background: url("../images/lightpaperfibers.png");*/
+    color: #3e3e3e;
+    background: url("../images/school.png");
     padding-top: 70px;
     margin-bottom: 100px;
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
-}
+
 
 a {
     cursor: pointer;
@@ -35,7 +35,7 @@ a:hover {
     background: rgb(138,78,132);
 }
 #topNav a {
-    color: black;
+    color: #000000;
 }
 
 .dropdown-menu  {
@@ -58,7 +58,7 @@ li.dropdown.open > a:focus {
 footer {
     background: rgb(138,78,132);
     color: black;
-    font-size: 11px;
+    font-size: 14px;
     padding: 20px;
 
     position: absolute;
@@ -70,8 +70,8 @@ footer {
 
 
 .jumbotron {
-    background: url(../images/logo.jpg) no-repeat 50% 50%;
-    height: 400px;
+    background: url(../images/reads.jpg) no-repeat 50% 50%;
+    height: 200px;
     background-size: cover;
     text-shadow: 0 1px 3px rgba(255, 255, 255, .8);
     color: rgba(0, 1, 0, .9);
@@ -227,4 +227,43 @@ footer {
 .badge {
     background: #fff;
     color: #080808;
+}
+
+.body-border {
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+}
+
+.category-item {
+    border: 1px solid transparent;
+}
+
+.category-item:hover {
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+}
+
+.needs-list .key-advantage .container .img {
+    text-align: center;
+}
+.needs-list .key-advantage .container .img img{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    margin: 0 auto;
+}
+.needs-list .key-advantage .container .text h2{
+    font-size: 28px;
+    line-height: 28px;
+}
+.needs-list .key-advantage .container .text h2 a{
+    text-decoration: none;
+    color: #241732;
+}
+.needs-list .key-advantage .container .text h2 a:hover{
+    color: #ff8d00;
 }

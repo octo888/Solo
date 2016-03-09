@@ -19,6 +19,8 @@ public class Item {
 
     private String category;
 
+    private int categoryType;
+
     @Lob
     @Type(type = "org.hibernate.type.StringClobType")
     @Column(length = Integer.MAX_VALUE)
@@ -27,6 +29,8 @@ public class Item {
     private int price;
 
     private Date dateOnSite;
+
+    /*private boolean top;*/
 
     @ElementCollection
     private Map<String,String> charact;
@@ -108,4 +112,20 @@ public class Item {
     public void setImages(List<Image> images) {
         this.images = images;
     }
+
+    public int getCategoryType() {
+        return categoryType;
+    }
+
+    public void setCategoryType(int categoryType) {
+        this.categoryType = categoryType;
+    }
+
+    /*public boolean isTop() {
+        return top;
+    }
+
+    public void setTop(boolean top) {
+        this.top = top;
+    }*/
 }
