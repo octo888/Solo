@@ -37,6 +37,22 @@ a:hover {
 #topNav a {
     color: #000000;
 }
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+.navbar-contact {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
 
 .dropdown-menu  {
     background: #5c2e91;
