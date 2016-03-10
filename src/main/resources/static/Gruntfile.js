@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat : {
             js_app : {
-                src : ['app/app.js', 'app/services/fileUpload.js', 'app/services/*.js', 'app/controllers/*.js', 'app/**/*.js'],
+                src : ['app/app.js', 'app/services/fileUpload.js', 'app/services/*.js', 'app/controllers/*.js', 'app/**/*.js', 'app/site.js'],
                 dest : appDirectory + '/application.js'
             },
             js_vendor : {
@@ -39,26 +39,26 @@ module.exports = function(grunt) {
 
             },
             js: ['Gruntfile.js', 'js/**/*.js']
-        }
-       /* less: {
+        },
+        less: {
             my: {
                 files: {
-                    'app/css/application.css' : ['less/build.less']
+                    'build/css/application.css' : ['less/build.less']
                 }
             }
-        }*/
+        }
     });
-    grunt.registerTask('default', ['jshint', 'clean', 'concat']);
+    grunt.registerTask('default', ['jshint', 'clean', 'concat', 'less']);
     grunt.registerTask('prod', ['jshint', 'clean', 'uglify', 'concat', 'less']);
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-   // grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     function getVendorJsLibs() {
-        return ['jquery', 'angular','angular-translate', 'angular-cookies',  'angular-translate-loader-url', 'angular-route', 'ngStorage', 'bootstrap']
+        return ['jquery', 'angular','angular-translate', 'angular-animate', 'angular-cookies',  'angular-translate-loader-url', 'angular-route', 'ngStorage', 'bootstrap']
             .map(function(lib) {
                 return lib.indexOf("angular") === 0 ?
                 "lib/angular/" + lib + ".min.js" : "lib/" + lib + ".min.js";

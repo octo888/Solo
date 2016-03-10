@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ngStorage'])
+angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ngStorage', 'ngAnimate'])
     .config(['$translateProvider', '$httpProvider', '$routeProvider', function ($translateProvider, $httpProvider, $routeProvider) {
         'use strict';
 
@@ -567,7 +567,75 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
 
 }());
 
+(function() {
+    'use strict';
+    angular.module('soloApp').directive('addToCartButton', function() {
 
+
+        function link(scope, element, attributes) {
+            element.on('click', function(event){
+                var cartElem = angular.element(document.getElementsByClassName("badge-cart"));
+                console.log(cartElem);
+                var offsetTopCart = cartElem.prop('offsetTop');
+                var offsetLeftCart = cartElem.prop('offsetLeft');
+                var widthCart = cartElem.prop('offsetWidth');
+                var heightCart = cartElem.prop('offsetHeight');
+                var imgElem = angular.element(event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1]);
+               /* console.log(angular.element(event.target.parentNode.parentNode.parentNode));
+                console.log(angular.element(event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1].childNodes[1]));*/
+                console.log(imgElem);
+                console.log(imgElem.prop('src'));
+                console.log(imgElem.prop('currentSrc'));
+                var parentElem = angular.element(event.target.parentNode.parentNode.parentNode);
+                var offsetLeft = imgElem.prop("offsetLeft");
+                var offsetTop = imgElem.prop("offsetTop");
+                var imgSrc = imgElem.prop("currentSrc");
+                console.log(offsetLeft + ' ' + offsetTop + ' ' + imgSrc);
+                var imgClone = angular.element('<img src="' + imgSrc + '"/>');
+                imgClone.css({
+                    'height': '200px',
+                    'position': 'absolute',
+                    'top': offsetTop + 'px',
+                    'left': offsetLeft + 'px',
+                    'opacity': 0.5
+                });
+                imgClone.addClass('itemaddedanimate');
+                parentElem.append(imgClone);
+                setTimeout(function () {
+                    imgClone.css({
+                        'height': '100px',
+                        'top': (offsetTopCart+heightCart/2)+'px',
+                        'left': (offsetLeftCart+widthCart/2)+'px',
+                        'opacity': 0.5
+                    });
+                }, 500);
+                setTimeout(function () {
+                    imgClone.css({
+                        'height': 0,
+                        'opacity': 0.5
+
+                    });
+                    cartElem.addClass('shakeit');
+                }, 1000);
+                setTimeout(function () {
+                    cartElem.removeClass('shakeit');
+                    imgClone.remove();
+                }, 1500);
+            });
+        };
+
+
+        return {
+            restrict: 'E',
+            link: link,
+            transclude: true,
+            replace: true,
+            scope: {},
+            template: '<button class="add-to-cart" ng-transclude></button>'
+        };
+    });
+
+}());
 'use strict';
 
 /* Filters */
@@ -628,3 +696,43 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
 
 }());
 
+
+$('.add-to-cart').on('click', function () {
+    var cart = $('.badge-cart');
+    var imgtodrag = $(this).parent('.item-cart').find("img").eq(0);
+    alert(imgtodrag);
+    if (imgtodrag) {
+        var imgclone = imgtodrag.clone()
+            .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+            .css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'height': '150px',
+                'width': '150px',
+                'z-index': '100'
+            })
+            .appendTo($('body'))
+            .animate({
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left + 10,
+                'width': 75,
+                'height': 75
+            }, 1000, 'easeInOutExpo');
+
+        setTimeout(function () {
+            cart.effect("shake", {
+                times: 2
+            }, 200);
+        }, 1500);
+
+        imgclone.animate({
+            'width': 0,
+            'height': 0
+        }, function () {
+            $(this).detach()
+        });
+    }
+});

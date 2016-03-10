@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="./lib/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="build/css/application.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
    <!-- <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -45,12 +45,12 @@
                     </ul>
                 </li>
 
-                <li><a><p>Телефон: +38 093 381 93 48</p><p>Email: synery26@gmail.com</p></a></li>
+                <li><a>Контакты</a></li>
 
                 <li class="pull-right" ng-if="!$root.authenticated"><a ng-href="#/login">Войти</a></li>
                 <li class="pull-right" ng-if="$root.authenticated"><a ng-click="logout()">Выйти</a></li>
                 <li class="pull-right"><a ng-href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span><strong>Корзина</strong>
-                    <span class="badge">{{cartLength()}}</span></a></li>
+                    <span class="badge badge-cart">{{cartLength()}}</span></a></li>
 
             </ul>
            <!-- <ul class="nav navbar-nav pull-right">
@@ -59,6 +59,7 @@
                 <li class="pull-right"><a ng-href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span><strong>Корзина</strong>
                     <span class="badge">{{cartLength()}}</span></a></li>
             </ul>-->
+
         </div><!-- /.nav-collapse -->
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
@@ -78,6 +79,7 @@
 </footer>
 
 <script type="text/javascript" src="./build/vendor.js"></script>
+
 <script type="text/javascript" src="./build/application.js"></script>
 
 <!--<script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>

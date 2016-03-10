@@ -14,12 +14,10 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     color: #3e3e3e;
-    background: url("../images/school.png");
+   /* background: url("../images/school.png");*/
     padding-top: 70px;
     margin-bottom: 100px;
 }
-
-
 
 a {
     cursor: pointer;
@@ -32,7 +30,7 @@ a:hover {
 }
 
 #topNav {
-    background: rgb(138,78,132);
+    background:#ffb7c5;
 }
 #topNav a {
     color: #000000;
@@ -282,4 +280,20 @@ footer {
 }
 .needs-list .key-advantage .container .text h2 a:hover{
     color: #ff8d00;
+}
+
+.shakeit {
+    -webkit-animation-name: thumb;
+    -webkit-animation-duration: 200ms;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-timing-function: linear;
+}
+.itemaddedanimate {
+    -webkit-transition: all ease-in-out 0.5s;
+}
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.8); }
+    100% { -webkit-transform: scale(1); }
 }

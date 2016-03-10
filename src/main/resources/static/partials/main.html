@@ -58,7 +58,7 @@
             </div>
         </div>-->
 
-            <div class="col-xs-12 col-sm-6 col-lg-3"
+            <div class="col-xs-12 col-sm-6 col-lg-3 item-cart"
                  ng-repeat="item in items | filter: search | orderBy: 'name' | selectedPrice: price ">
                 <div class="item">
 
@@ -78,9 +78,10 @@
 
                 <a ng-href="#/item/{{item.id}}" class="itemTitle" data-toggle="tooltip" data-placement="right"
                    title="{{item.name}}"><h4 align="center">{{item.name}}</h4></a>
-                <!--<p id="bookDesc" >{{book.description | descsize}}</p>-->
 
-                <p class="text-center"><!--<a class="btn btn-primary" ng-href="#/book/{{book.id}}" role="button">Подробнее &raquo;</a>-->
+
+                <p class="text-center">
+                   <!-- <add-to-cart-button>Add to cart</add-to-cart-button>-->
                     <a class="btn btn-primary"  ng-click="addToCart(item)" role="button">{{'main.buy' | translate }} за {{item.price}} грн. &raquo;</a></p>
 
             </div>
@@ -90,5 +91,6 @@
     <!--/.col-xs-12.col-sm-8-->
 
 </div><!--/row-->
+
 
 
