@@ -523,9 +523,16 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
         .controller('MainCtrl', ['$scope', 'ItemService', MainCtrl]);
 
     function MainCtrl($scope, ItemService) {
+
         ItemService.getAllItems().then(function(data){
             $scope.items = data;
+
+
+
         });
+
+
+
     }
 }());
 
@@ -697,6 +704,23 @@ angular.module("soloApp", ['pascalprecht.translate', 'ngRoute', 'ngCookies', 'ng
 }());
 
 
+$(function() {
+
+    $('#bigCarousel').carousel('cycle');
+
+    $('a.pop').click(function(e) {
+        e.preventDefault();
+    });
+
+    $('a.pop').popover();
+
+    $('[rel="tooltip"]').tooltip();
+
+    $('.nav-tabs a:first').tab('show');
+
+});
+
+
 $('.add-to-cart').on('click', function () {
     var cart = $('.badge-cart');
     var imgtodrag = $(this).parent('.item-cart').find("img").eq(0);
@@ -736,3 +760,4 @@ $('.add-to-cart').on('click', function () {
         });
     }
 });
+

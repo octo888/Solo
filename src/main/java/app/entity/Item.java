@@ -30,7 +30,7 @@ public class Item {
 
     private Date dateOnSite;
 
-    /*private boolean top;*/
+    private boolean top;
 
     @ElementCollection
     private Map<String,String> charact;
@@ -121,11 +121,11 @@ public class Item {
         this.categoryType = categoryType;
     }
 
-    /*public boolean isTop() {
+    public boolean isTop() {
         return top;
     }
 
     public void setTop(boolean top) {
         this.top = top;
-    }*/
+    }
 }

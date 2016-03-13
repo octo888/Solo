@@ -49,6 +49,7 @@ public class ItemService {
             for (Image i : imgs) {
                 listId.add(i.getId());
             }
+            item.setImagesId(listId);
             item.setImages(null);
         }
         return items;
