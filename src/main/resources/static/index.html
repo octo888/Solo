@@ -45,7 +45,11 @@
                     </ul>
                 </li>
 
-                <li><a>Контакты</a></li>
+                <li>
+                    <a><div class="phone">
+                        <i class="fa fa-phone"></i> Контакты
+                    </div></a>
+                </li>
 
                 <li class="pull-right" ng-if="!$root.authenticated"><a ng-href="#/login">Войти</a></li>
                 <li class="pull-right" ng-if="$root.authenticated"><a ng-click="logout()">Выйти</a></li>
@@ -66,6 +70,18 @@
 <!--<div class="jumbotron text-center">
     <h1>SoloBook</h1>
 </div>-->
+
+<div class="call-popup">
+    <div class="contact-centre">
+        <p>Телефон: +38 093 348 93 41</p>
+
+        <span>Email: syneri26@gmail.com</span>
+    </div>
+   <!-- <a href="javascript:;" class="btn">Заказать обратный звонок</a>
+    <a href="javascript:;" class="btn">Позвонить по Skype</a>
+    <a href="javascript:;" class="btn">Facebook чат</a>
+    <a href="javascript:;" class="btn">Skype-чат</a>-->
+</div>
 
 <div class="container">
     <div> <!-- if border - class body-border -->
@@ -134,5 +150,34 @@
 
 <script type="text/javascript" src="app/filters/filters.js"></script>
 <script type="text/javascript" src="app/directives/directives.js"></script>-->
+
+<script type="text/javascript">
+    function mouseUpHandler (e)
+    {
+        var container = $(".call-popup");
+
+        if (!container.is(e.target) // if the target of the click isn't the container...
+                && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            container.hide();
+            $('.phone').removeClass('act');
+            $(document).unbind('mouseup', mouseUpHandler); //Remove the event listener to prevent memory leaks
+        }
+        console.log("asdasd");
+    }
+
+    $('.phone').click(function(e) {
+        e.preventDefault();
+        if( $(this).hasClass('act')){
+            $(this).removeClass('act');
+            $('.call-popup').hide();
+            $(document).unbind('mouseup', mouseUpHandler);
+        }else{
+            $(this).addClass('act');
+            $('.call-popup').show();
+            $(document).bind("mouseup", mouseUpHandler);
+        }
+    });
+</script>
 </body>
 </html>

@@ -124,6 +124,10 @@ li.dropdown.open > a:focus {
   color: #555;
 }
 
+.item-cart {
+  margin: 20px auto;
+}
+
 .item-product img {
   display: block;
   margin: 0 auto;
@@ -146,7 +150,6 @@ li.dropdown.open > a:focus {
   text-align: left;
   text-decoration: none;
   border-radius: 3px;
-  font-weight: 700;
 }
 
 .info:hover {
@@ -299,4 +302,43 @@ li.dropdown.open > a:focus {
   0% { -webkit-transform: scale(1); }
   50% { -webkit-transform: scale(0.8); }
   100% { -webkit-transform: scale(1); }
+}
+
+.phone{
+  text-align: center;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  color: @black-color;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.phone:hover{
+  border: 1px solid @black-color;
+}
+.phone .fa{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.call-popup{
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #eee;
+  padding: 30px;
+  z-index: 555;
+  text-align: center;
+  display: none;
+  margin-bottom: 20px;
+}
+.call-popup .contact-centre{
+  font-size: 30px;
+  line-height: 30px;
+  color: @black-color;
+  text-align: center;
+}
+.call-popup .btn{
+  border: 1px solid #fff;
+  margin: 0 5px;
 }
