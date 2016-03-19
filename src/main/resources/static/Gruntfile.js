@@ -58,7 +58,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
 
     function getVendorJsLibs() {
-        return ['jquery', 'angular','angular-translate', 'angular-animate', 'angular-cookies',  'angular-translate-loader-url', 'angular-route', 'ngStorage', 'bootstrap']
+        return ['jquery', 'angular','angular-translate', 'angular-animate', 'angular-cookies',  'angular-translate-loader-url',
+            'angular-route', 'ngStorage', 'angular-touch', 'angular-carousel', 'bootstrap']
             .map(function(lib) {
                 return lib.indexOf("angular") === 0 ?
                 "lib/angular/" + lib + ".min.js" : "lib/" + lib + ".min.js";
