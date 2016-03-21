@@ -17,8 +17,8 @@ public class Image {
     private byte[] body;
 
     @ManyToOne
-    @JoinColumn(name = "book_id")
-    private Book book;
+    @JoinColumn(name = "blog_id")
+    private Blog blog;
 
     @ManyToOne
     @JoinColumn(name = "item_id")
@@ -32,10 +32,10 @@ public class Image {
         this.body = body;
     }
 
-    public Image(String name, byte[] body, Book book) {
+    public Image(String name, byte[] body, Blog blog) {
         this.name = name;
         this.body = body;
-        this.book = book;
+        this.blog = blog;
     }
 
     public Image(String name, byte[] body, Item item) {
@@ -67,12 +67,12 @@ public class Image {
         this.body = body;
     }
 
-    public Book getBook() {
-        return book;
+    public Blog getBlog() {
+        return blog;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBlog(Blog blog) {
+        this.blog = blog;
     }
 
     public Item getItem() {
